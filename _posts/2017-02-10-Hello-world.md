@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Hello World!"
+title: "Hello world"
 date: 2017-02-10
 ---
 
-This is my first post, so hello world!
+Hello world!
