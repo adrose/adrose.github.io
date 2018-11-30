@@ -1,0 +1,354 @@
+
+<!DOCTYPE html>
+<html><head>
+
+<!--
+Copyright 2018 Adon F. G. Rosen
+-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<title>PNC Env Imaging Effects</title>
+<link rel="icon" type="image/png" href="images/favicon-32x32.png" sizes="32x32"/>
+<style type="text/css">
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+body {background-color: black;
+      text-align: center;
+      font-family: 'Open Sans';
+      color: white;
+      display: flex;
+      position:relative;
+      flex-direction: column;
+      margin:0; /*gets rid of white space around body*/
+      margin-top:16px;
+      position:relative; /*REQUIRED Sets up positioning for your footer*/
+     }
+
+  h1 {text-align: center;
+      font-weight: normal;
+     }
+  h2 {text-align: center;
+      font-weight: lighter;
+     }
+  h3 {text-align: center;
+      font-weight: normal;
+     }
+  h4 {text-align: center;
+      font-weight: normal;
+     }
+
+ .mango {
+         display: flex;
+         justify-content: center;
+         text-align: center;
+        }
+
+#sticky {
+  width:100%;
+  padding:20px;
+  padding-bottom:16px;
+  background:black;
+  color:white;
+  font-weight:bold;
+  font-size:18px;
+  text-align:center;
+  position:fixed;    /*Here's what sticks it*/
+  bottom:0;          /*to the bottom of the body*/
+  left:0;            /*and to the left of the body.*/
+}
+
+.controls {
+         text-align: center;
+         position: fixed;
+         z-index: 10
+        }
+
+span {
+    padding: 5px;
+    border: 5px solid black;
+    display: inline-block;
+}
+
+.spanv {
+    text-align: center;
+    display:inline-block;
+    width: 20px;
+    height: 20px;
+    transform: rotate(-90deg) ;
+    transform-origin: 0 0;
+}
+
+.content {
+  flex: 1 0 auto;
+}
+
+.footer {
+   border-top: 1px solid #d5d5d5; 
+   font-size: .8em; 
+   flex-shrink: 0;
+   width: 100%;
+}
+
+</style>
+
+<link rel="stylesheet" href="http://www.google.com/cse/style/look/default.css" type="text/css">
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-47180270-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+</head>
+
+<body>
+	<div class="content">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <h1>PNC Environmental Neuroimaging Effects</h1>
+    <h4>Gur et al., 2019</h4>
+    <a href="coronal.html"style="color: #7777aa !important; text-decoration: none">
+      > Switch to coronal
+    </a>
+    <br><br>
+    <a href="index.html"style="color: #7777aa !important; text-decoration: none">
+      > Switch to axial
+    </a>
+    <br><br>
+    <a href="https://github.com/PennBBL/ScottRosenCannabisStruc"style="color: #7777aa !important; text-decoration: none">
+      > Go to processing code
+    </a>
+    <br><br>
+
+<div class="controls">
+    <button id="button0">
+      Play / Pause all
+    </button>
+
+    <script>
+    var btn0 = document.getElementById("button0")
+    btn0.addEventListener("click", playPause)
+    function playPause() {
+      var videos = document.querySelectorAll("video");
+      var len = videos.length;
+      for(var i=0; i<len; i++){
+        var myVideo = videos[i];
+        if (myVideo.paused)
+          myVideo.play();
+        else
+          myVideo.pause();
+      }
+    }
+    </script>
+
+    <button id="button1">
+        Reset all
+    </button>
+
+    <script>
+    var btn1 = document.getElementById("button1")
+    btn1.addEventListener("click", resetAll)
+    function resetAll() {
+        var videos = document.querySelectorAll("video");
+        var len=videos.length;
+        for(var i=0; i<len; i++){
+          var myVideo = videos[i];
+          myVideo.pause();
+          myVideo.currentTime = 0;
+      }
+    }
+    </script>
+</div>
+
+<h2>Effect Size Maps</h2>
+<main class="mango">
+  <div mvid="1" style="margin: 0 auto; width: 100%">
+    <span>
+        <div class="overlay">
+          <p><h2>Benign Env - Adverse Env</h2></p>
+        </div>
+        <div class="spanv">
+        	<h1>Volume</h1>
+        </div>
+         <video id="mvid0" width="400"">
+            <source src="ses/imagingFigures/vol/SES/movieS.mp4#t=7" type="video/mp4"/>
+         </video>
+    </span>
+    <span>
+        <div class="overlay">
+          <p><h2>1 TSE</h2></p>
+        </div>
+         <video id="mvid0" width="400"">
+            <source src="tse/imagingFigures/vol/1/movieS.mp4#t=7" type="video/mp4"/>
+         </video>
+    </span>
+    <span>
+        <div class="overlay">
+          <p><h2>2+ TSE</h2></p>
+        </div>
+         <video id="mvid0" width="400"">
+            <source src="tse/imagingFigures/vol/2/movieS.mp4#t=7" type="video/mp4"/>
+         </video>
+    </span>
+  </div>
+</main>
+<main class="mango">
+  <div mvid="1" style="margin: 0 auto; width: 100%">
+    <span>
+        <div class="spanv">
+        	<h1>GMD</h1>
+        </div>
+         <video id="mvid0" width="400"">
+            <source src="ses/imagingFigures/gmd/SES/movieS.mp4#t=7" type="video/mp4"/>
+         </video>
+    </span>
+    <span>
+         <video id="mvid0" width="400"">
+            <source src="tse/imagingFigures/gmd/1/movieS.mp4#t=7" type="video/mp4"/>
+         </video>
+    </span>
+    <span>
+         <video id="mvid0" width="400"">
+            <source src="tse/imagingFigures/gmd/2/movieS.mp4#t=7" type="video/mp4"/>
+         </video>
+    </span>
+  </div>
+</main>
+<main class="mango">
+  <div mvid="1" style="margin: 0 auto; width: 100%">
+    <span>
+        <div class="spanv">
+        	<h1>MD</h1>
+        </div>
+         <video id="mvid0" width="400"">
+            <source src="ses/imagingFigures/md/SES/movieS.mp4#t=7" type="video/mp4"/>
+         </video>
+    </span>
+    <span>
+         <video id="mvid0" width="400"">
+            <source src="tse/imagingFigures/md/1/movieS.mp4#t=7" type="video/mp4"/>
+         </video>
+    </span>
+    <span>
+         <video id="mvid0" width="400"">
+            <source src="tse/imagingFigures/md/2/movieS.mp4#t=7" type="video/mp4"/>
+         </video>
+    </span>
+  </div>
+</main>
+<main class="mango">
+  <div mvid="1" style="margin: 0 auto; width: 100%">
+    <span>
+        <div class="spanv">
+        	<h1>FA</h1>
+        </div>
+         <video id="mvid0" width="400"">
+            <source src="ses/imagingFigures/fa/SES/movieS.mp4#t=7" type="video/mp4"/>
+         </video>
+    </span>
+    <span>
+         <video id="mvid0" width="400"">
+            <source src="tse/imagingFigures/fa/1/movieS.mp4#t=7" type="video/mp4"/>
+         </video>
+    </span>
+    <span>
+         <video id="mvid0" width="400"">
+            <source src="tse/imagingFigures/fa/2/movieS.mp4#t=7" type="video/mp4"/>
+         </video>
+    </span>
+  </div>
+</main>
+<main class="mango">
+  <div mvid="1" style="margin: 0 auto; width: 100%">
+    <span>
+        <div class="spanv">
+        	<h1>CBF</h1>
+        </div>
+         <video id="mvid0" width="400"">
+            <source src="ses/imagingFigures/cbf/SES/movieS.mp4#t=7" type="video/mp4"/>
+         </video>
+    </span>
+    <span>
+         <video id="mvid0" width="400"">
+            <source src="tse/imagingFigures/cbf/1/movieS.mp4#t=7" type="video/mp4"/>
+         </video>
+    </span>
+    <span>
+         <video id="mvid0" width="400"">
+            <source src="tse/imagingFigures/cbf/2/movieS.mp4#t=7" type="video/mp4"/>
+         </video>
+    </span>
+  </div>
+</main>
+<main class="mango">
+  <div mvid="1" style="margin: 0 auto; width: 100%">
+    <span>
+        <div class="spanv">
+        	<h1>ReHo</h1>
+        </div>
+         <video id="mvid0" width="400"">
+            <source src="ses/imagingFigures/reho/SES/movieS.mp4#t=7" type="video/mp4"/>
+         </video>
+    </span>
+    <span>
+         <video id="mvid0" width="400"">
+            <source src="tse/imagingFigures/reho/1/movieS.mp4#t=7" type="video/mp4"/>
+         </video>
+    </span>
+    <span>
+         <video id="mvid0" width="400"">
+            <source src="tse/imagingFigures/reho/2/movieS.mp4#t=7" type="video/mp4"/>
+         </video>
+    </span>
+  </div>
+</main>
+<main class="mango">
+  <div mvid="1" style="margin: 0 auto; width: 100%">
+    <span>
+        <div class="spanv">
+        	<h1>Alff</h1>
+        </div>
+         <video id="mvid0" width="400"">
+            <source src="ses/imagingFigures/alff/SES/movieS.mp4#t=7" type="video/mp4"/>
+         </video>
+    </span>
+    <span>
+         <video id="mvid0" width="400"">
+            <source src="tse/imagingFigures/alff/1/movieS.mp4#t=7" type="video/mp4"/>
+         </video>
+    </span>
+    <span>
+         <video id="mvid0" width="400"">
+            <source src="tse/imagingFigures/alff/2/movieS.mp4#t=7" type="video/mp4"/>
+         </video>
+    </span>
+  </div>
+</main>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+
+<footer id="sticky"> <img src="images/esBar.png"> <h1>Effect Size</h1> <a href="https://twitter.com/Roseadnn" class="twitter-follow-button" data-show-count="false">Follow AFGR</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></footer>
+<script type='text/javascript'>//<![CDATA[
+
+$("#mvid0, #mvid1, #mvid2, #mvid3, #mvid4, #mvid5, #mvid6, #mvid7, #mvid8, #mvid9, #mvid10, #mvid11, #mvid12, #mvid13, #mvid14, #mvid15, #mvid16, #mvid17, #mvid18, #mvid19, #mvid20, #mvid21, #mvid22, #mvid23, #mvid24").hover(function(event) {
+    if(event.type === "mouseenter") {
+        $(this).attr("controls", "");
+    } else if(event.type === "mouseleave") {
+        $(this).removeAttr("controls");
+    }
+})
+
+</script>
+</div>
+</body>
+</html>
