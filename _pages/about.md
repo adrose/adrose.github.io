@@ -13,6 +13,6 @@ Presently, I am a Postdoctoral Researcher at [Vanderbilt University](https://www
 
 I earned my PhD in [Quantitative Psychology](https://en.wikipedia.org/wiki/Quantitative_psychology) from the [University of Oklahoma](https://www.ou.edu/). My research agenda is primarily focused on the intersection of psychopathology assessment and measurement with intensive longitudinal modeling. This includes a broad interest in understanding dynamic psychological processes over time. My applied interests further extend to exploring brain-behavior relationships, developing sophisticated methods for measuring adversity and neglect, and analyzing dyadic interactions.
 
-Prior to my time at OU I was a senior data analyst at the University of Pennsylvania. At Penn I was mentored by Ruben C. Gur and Tyler Moore, where I worked on examining brain-behavior relationships in a neruodevelopmental cohort. 
+Prior to my time at OU I was a senior data analyst at the University of Pennsylvania. At Penn I was mentored by Ruben C. Gur and Tyler Moore, where I worked on examining brain-behavior relationships in a neurodevelopmental cohort. 
 
 Outside of my research, I can be found [enjoying both mountain biking and road cycling](https://www.strava.com/athletes/15237851). I'm also an amateur chef who loves culinary exploration and a devoted [reader of science fiction and fantasy literature](https://www.goodreads.com/user/show/127660078-adon-rosen), with a growing interest in historical nonfiction.
