@@ -18,3 +18,26 @@ plot(louvain_clusters, graph_obj, layout = layout_as_star)
 png("./Documents/adrose.github.io/images/rosenResearchThemeNetwork.png", width = 12, height = 12, units="in", res=300)
 plot(louvain_clusters, graph_obj, main="Rosen Research Themes Network")
 dev.off()
+
+library(visNetwork)
+nodes <- data.frame(id = V(graph_obj))
+edges <- as.data.frame(as_edgelist(graph_obj))
+names(edges) <- c("from", "to")
+
+# Create the interactive network
+forWeb <- visIgraph(graph_obj, layout = "layout_in_circle")
+visSave(forWeb, file = "~/Documents/adrose.github.io/files/network.html", background = "white", selfcontained = TRUE)
+## Now add the clusters
+dummy <- toVisNetworkData(graph_obj)
+my.edges <- dummy$edges
+my.nodes <- dummy$nodes
+my.nodes$groups <- louvain_clusters$membership
+my.nodes$color.background <- c("red", "blue", "green" ,"yellow", "purple")[my.nodes$groups]
+my.nodes$color.border <- c("red", "blue", "green" ,"yellow", "purple")[my.nodes$groups]
+my.edges$color <- "black"
+my.edges$width <- (range01(my.edges$width)+.05)*3
+forWeb <- visNetwork(my.nodes, my.edges)%>%
+  visIgraphLayout(layout = "layout_with_sugiyama",physics = FALSE, smooth = TRUE) %>% 
+  visOptions(highlightNearest = list(enabled = T, hover = T), 
+             nodesIdSelection = T)
+visSave(forWeb, file = "~/Documents/adrose.github.io/files/network.html", background = "white", selfcontained = TRUE)
