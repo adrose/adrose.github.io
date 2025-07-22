@@ -17,10 +17,8 @@ citation: 'Rosen, A. F. G., Kwasneski, K., Liao, X., Bard, D. E., & Skowron, E. 
 Research on Parent-Child Interaction Therapy (PCIT) delivered to families with a history of maltreatment has demonstrated effects on increasing positive parenting and reducing negative behaviors, but no clear impact on child compliance. This study explores how specific parenting behaviors influence child compliance in families with a history of maltreatment. Data from a randomized clinical trial involving 204 parent-child dyads were analyzed. During a five-minute clean-up task, researchers observed distinct categories of parenting behaviors before and after PCIT. The results indicated that increased positive parenting behaviors and a decrease in the frequency of commands were associated with higher child compliance.
 
 ## Learning Points
-This manuscript performed a really fun analysis on dyadic interactions between parent-child dayds from a randomized controlled trial examining the efficacy of Parent CHild Interaction Therapy (PCIT) in a child-welfare-involved cohort.
+This manuscript presents a novel analysis of dyadic interactions between parents and children in a child-welfare-involved cohort. The data are from a randomized controlled trial that examined the efficacy of Parent-Child Interaction Therapy (PCIT).
 
-While the timeseries analysis in this paper is hidden under a logistic regression, it is examining the temporal order of parental actions that influence if a child will comply to a parental command.
+Using a time-series analysis framed within a logistic regression, we examined how the sequence of parental actions influenced whether a child would comply with a parental command. The figure below shows an example of a time series from a single dyad, illustrating the data used in our model.
 
 Here is an example of one of the timeseries from a single ![dyad](/images/figure1TimeSeries.jpg)
-
-Using these data, we build an aanalysis which examined if a child complied to a parent command, and the contemperanous parental actions to each fo these commands.

@@ -31,6 +31,6 @@ sexual and/or gender groups in science. One or more of the authors of this paper
 sex and gender balance in our author group
 
 ## Learning Points
-This paper was really my first foray into change point modeling. The goal of the paper was to idenitfy the evolution of pediatric suicide ideation cases in the Emergency Department at the Oklahoma City Children's Hospital. The entire time sereis can be found ![here](/images/figure1CovidTimeseries.png)
+This paper was really my first foray into change point modeling. The goal of the paper was to idenitfy the evolution of pediatric suicide ideation cases in the Emergency Department at the Oklahoma City Children's Hospital. The entire time series can be found ![here](/images/figure1CovidTimeseries.png)
 
-The project was seeking to idenitfy if the COVID-19 infleunced these presentation rates. A changepoint model was employed to idenitfy changes in the varaince, and autoregressive patterns of these presentations. The model resulted suggested a growth in the autoregresive parameter a month after the lockdown orders, here are the results of the changepoint ![here](/images/figure2CP.png)
+The project was seeking to idenitfy if the COVID-19 panedmic influenced these presentation rates. A changepoint model was employed to idenitfy changes in the varaince and autoregressive patterns of these presentations. The model suggested a growth in the autoregresive parameter a month after the lockdown orders, here are the results of the changepoint ![here](/images/figure2CP.png)

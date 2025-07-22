@@ -15,7 +15,7 @@ V(graph_obj)$size <- (range01(s)+1)*10
 louvain_clusters <- cluster_louvain(graph_obj, resolution = 1.3)
 plot(louvain_clusters, graph_obj, layout = layout_in_circle)
 plot(louvain_clusters, graph_obj, layout = layout_as_star)
-png("./Documents/adrose.github.io/images/rosenResearchThemeNetwork.png", width = 12, height = 12, units="in", res=300)
+png("~/Documents/adrose.github.io/images/rosenResearchThemeNetwork.png", width = 12, height = 12, units="in", res=300)
 plot(louvain_clusters, graph_obj, main="Rosen Research Themes Network")
 dev.off()
 
