@@ -84,6 +84,8 @@ publication_category:
     title: 'Select Journal Articles'    
   conferences:
     title: 'Conference Papers'
+  personal:
+    title: 'Research Themes'
 
 # Site Settings
 teaser                   :  # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
