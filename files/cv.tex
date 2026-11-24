@@ -29,7 +29,12 @@ maxbibnames=99,giveninits=true,uniquename=false, doi=false, url=false, isbn=fals
 	{$^\dagger$}
 	{}%
 }%%
-
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\fancyhead[R]{\footnotesize\color{gray}Rendered on \today}
+\fancyfoot[C]{\footnotesize\color{gray}Page \thepage}
 
 %\newcommand{\tab}[1]{\hspace{.2667\textwidth}\rlap{#1}}
 %\newcommand{\itab}[1]{\hspace{0em}\rlap{#1}}
@@ -85,7 +90,16 @@ maxbibnames=99,giveninits=true,uniquename=false, doi=false, url=false, isbn=fals
 	
 	
 	\begin{rSection}{Research Experience}
-		\begin{rSubsection}{\textbf{Postdoctoral Researcher.}}{2024 - Present}{Supervisor: \href{https://www.vanderbilt.edu/psychological_sciences/bio/ashley-watts}{Dr. Ashley L. Watts}}{Vanderbilt University Department of Psychology}
+		\begin{rSubsection}{\textbf{Assistant Professor of Research}}{2026 - Present}{}{University of Oklahoma Department of Biostatistics \& Epidemiology}
+			\item Assist in the design and implementation of Ecological Momentary Assessment studies
+		\end{rSubsection}
+		
+		\begin{rSubsection}{\textbf{Postdoctoral Researcher.}}{2025 - 2026}{Supervisor: \href{https://www.vanderbilt.edu/psychological_sciences/bio/autumn-kujawa}{Dr. Autumn Kujawa}}{Vanderbilt University Department of Psychology}
+			\item Used Bayesian mlVAR for the analyses of ecological momentary assessment data in developmental cohort
+			\item Provided consultation for the application of generalized hierarchical regression for the analysis of cognitive and neuroimaging data
+		\end{rSubsection}
+		
+		\begin{rSubsection}{\textbf{Postdoctoral Researcher.}}{2024 - 2026}{Supervisor: \href{https://www.vanderbilt.edu/psychological_sciences/bio/ashley-watts}{Dr. Ashley L. Watts}}{Vanderbilt University Department of Psychology}
 			\item Developed Bayesian change point modeling for the analysis of heavily-skewed multilevel cross-sectional panel data
 			\item Developed alternative reliability technique for examining measurement capabilities of highly-skewed data
 		\end{rSubsection}
@@ -111,25 +125,29 @@ maxbibnames=99,giveninits=true,uniquename=false, doi=false, url=false, isbn=fals
 		\begin{rSubsectionAward}{Faculty for Undergraduate Psychology Travel Grant}{2014}\end{rSubsectionAward}
 		\begin{rSubsectionAward}{Undergraduate Award for Research Excellence}{2014}\end{rSubsectionAward}
 	\end{rSection}
-	\newpage
 	
 	\begin{rSection}{Publications} %\itemsep -1pt
 		\begin{refsection}
-			\nocite{barzilayStructuralBrainPatterns2020, baumImpactInscannerHead2018, ciricMitigatingHeadMotion2018, deletterSeekingCareSuicidal2025, durhamBlameFramingPrior2024, gurBurdenEnvironmentalAdversity2019, gurStructuralFunctionalBrain2021, jirsaraieAcceleratedCorticalThinning2019, kaczkurkinCommonDissociableRegional2018a, kaczkurkinDimensionsPsychopathologyAre2019, kaczkurkinEvidenceDissociableLinkage2019, kaczkurkinNeurostructuralHeterogeneityYouths2020, mooreDevelopmentComputerizedAdaptive2019, mooreDevelopmentProbabilityCalculator2022, nassarGestationalAgeDimensionally2019, pehlivanovaDiminishedCorticalThickness2018, pinesLeveragingMultishellDiffusion2020, roalfAlterationsWhiteMatter2020, rosenEffectsSkipLogicValidity2020, rosenMultipleIndicatorMultiple2022, rosenQuantitativeAssessmentStructural2018, scottAssociationCannabisCognitive2018, scottCannabisUseYouth2019, vandekarFasterFamilywiseError2018, vandekarSexDifferencesEstimated2019,kwasneskiCharacterizingBeneficialChange2025, rosenParentChildInteractionTherapys2025}
+			\nocite{pehlivanovaDiminishedCorticalThickness2018,barzilayStructuralBrainPatterns2020, baumImpactInscannerHead2018, ciricMitigatingHeadMotion2018, deletterSeekingCareSuicidal2025, durhamBlameFramingPrior2024, gurBurdenEnvironmentalAdversity2019, gurStructuralFunctionalBrain2021, jirsaraieAcceleratedCorticalThinning2019, kaczkurkinNeurostructuralHeterogeneityYouths2020, mooreDevelopmentComputerizedAdaptive2019, mooreDevelopmentProbabilityCalculator2022, nassarGestationalAgeDimensionally2019, pehlivanovaDiminishedCorticalThickness2018, pinesLeveragingMultishellDiffusion2020, roalfAlterationsWhiteMatter2020, rosenEffectsSkipLogicValidity2020, rosenMultipleIndicatorMultiple2022, rosenQuantitativeAssessmentStructural2018, scottAssociationCannabisCognitive2018, scottCannabisUseYouth2019, vandekarSexDifferencesEstimated2019, vandekarFasterFamilywiseError2018,kwasneskiCharacterizingBeneficialChange2025,rosenParentChildInteractionTherapys2026a, kaczkurkinEvidenceDissociableLinkage2019,wattsCovariationHigherorderPsychopathology2026,liaoEffectsParentChild,kaczkurkinCommonDissociableRegional2018a,kaczkurkinEvidenceDissociableLinkage2019, kaczkurkinNeurostructuralHeterogeneityYouths2020, wattsIncludingAbstainersConflatesa, wattsCovariationHigherorderPsychopathology2026}
 			\leavevmode
 			\printbibliography[type=article, title={\small{Published}}]
 		\end{refsection}
 		\begin{refsection}
-			\nocite{liaoEffectsPCITDosage, wattsCovariationHigherorderPsychopathology}
-			\leavevmode\printbibliography[title={\small{Under Review}}]
+			\leavevmode\printbibliography[title={\small{In Press}}]
 		\end{refsection}
 		\begin{refsection}
-			\nocite{rosenExaminationAgesStages,rosenAssessingReliabilityPresence}
+			\nocite{rosenAssessingReliabilityPresence, rosenExaminationAgesStages}
 			\leavevmode\printbibliography[title={\bf{\small{In Preparation}}}]
 		\end{refsection}
 	\end{rSection}
 	
+	
+	
 	\begin{rSection}{Invited Presentations}
+		\begin{rSubsectionPres}{Analyses encumbered by zero inflation -- A day in the life of a quantitative psychologist working with clinical data}{2026}{QuantDev Brownbag, University Park, Pennsylvania.}
+		\end{rSubsectionPres}
+		\begin{rSubsectionPres}{Analyses encumbered by zero inflation -- A day in the life of a quantitative psychologist working with clinical data}{2026}{Quantitative Methods and Data Analytics Colloquium, Nashville, Tennessee.} 
+		\end{rSubsectionPres}
 		\begin{rSubsectionPres}{Effects of PCIT Dosage on Child and Parent Outcomes: Differentiating CDI and PDI Session Impacts in Child Welfare-involved Families.}{2024}{Parent Child Interaction Therapy International Convention, Knoxville, Tennessee.} 
 		\end{rSubsectionPres}
 		\begin{rSubsectionPres}{The Impact of the COVID-19 Pandemic on Suicidal Ideation Among Youth.}{2024}{Meeting of the IDeA-States Clinical Translational Resources COVID Consortium,  Virtual.} 
@@ -167,15 +185,22 @@ maxbibnames=99,giveninits=true,uniquename=false, doi=false, url=false, isbn=fals
 	\end{rSection}
 	
 	\begin{rSection}{Service}
+		\textbf{Vanderbilt University:} \\
+		School for Science and Mathematics at Vanderbilt Youth Mentor \hfill2026-2027
+		
 		\textbf{University of Oklahoma:} \\
 		Psychology Department Quantitative Psychology Search Committee \hfill2021-2022 \\
 		Psychology Graduate Student Association Research Chair \hfill2019-2021 \\
 		Student Judge for Undergraduate Research Fair \hfill2020-2022
 		
 		\textbf{Ad hoc reviewer:}\\
-		BMC Medical Research Methodology \hfill 2021: 2; 2025: 1\\
-		Translational Psychiatry \hfill 2025: 1\\
-		Scientific Reports \hfill2024: 1 \\
+		Discover Informatics \hfill 2026: 1\\
+		Journal of Medical Systems \hfill 2026: 1\\
+		BMC Psychiatry \hfill2026: 1\\
+		Scientific Reports \hfill2024: 1; 2025: 2; 2026: 4\\
+		npj Digital Medicine \hfill 2025: 1; 2026: 2\\ 
+		BMC Medical Research Methodology \hfill 2021: 2; 2025: 1; 2026: 1\\
+		Translational Psychiatry \hfill 2025: 1; 2026: 2\\
 		Neuroimage \hfill2019: 1; 2023: 1 \\
 		Human Brain Mapping \hfill2020: 2; 2021: 1; 2022: 1 \\
 		Neuroscience and Biobehavioral Reviews \hfill2021: 3 \\
@@ -187,7 +212,7 @@ maxbibnames=99,giveninits=true,uniquename=false, doi=false, url=false, isbn=fals
 		Journal of Translational Engineering in Health and Medicine \hfill2018: 1 \\
 		
 		\textbf{Volunteer:}\\
-		Middle Tennessee Breakthrough T1D Walk Steering Committee\hfill 2024-Present\\
+		Middle Tennessee Breakthrough T1D Walk Steering Committee\hfill 2024-2026\\
 		Philadelphia Tour de Cure Steering Committee \hfill2016-2018
 	\end{rSection}
 	
@@ -209,7 +234,7 @@ maxbibnames=99,giveninits=true,uniquename=false, doi=false, url=false, isbn=fals
 			ashley.watts@vanderbilt.edu & david-bard@ouhsc.edu \\
 			& \\
 			Dr. Hairong Song \\
-			Associate Professor \\
+			Professor \\
 			Department of Psychology \\
 			University of Oklahoma \\
 			hsong@ou.edu
